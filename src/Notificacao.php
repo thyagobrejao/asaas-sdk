@@ -1,6 +1,6 @@
 <?php
 
-namespace CodePhix\Asaas;
+namespace ThyagoBrejao\Asaas;
 
 
 class Notificacao {
@@ -31,22 +31,22 @@ class Notificacao {
         }
         return $this->http->get('/notifications'.$filtro);
     }
-    
+
     // Retorna os dados da notificação de acordo com o Id
     public function getById($id){
         return $this->http->get('/notifications/'.$id);
     }
-    
+
     // Retorna a listagem de notificações de acordo com o Id do Cliente
     public function getByCustomer($customer_id){
         return $this->http->get('/customers/'.$customer_id.'/notifications');
     }
-    
+
     // Insere uma nova notificação
     public function create(array $dadosNotificacao){
         return $this->http->post('/notifications', $dadosNotificacao);
     }
-    
+
     // Atualiza os dados da notificação
     public function update($id, array $dadosNotificacao){
         return $this->http->post('/notifications/'.$id, $dadosNotificacao);

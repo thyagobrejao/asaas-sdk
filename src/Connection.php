@@ -1,6 +1,6 @@
 <?php
 
-namespace CodePhix\Asaas;
+namespace ThyagoBrejao\Asaas;
 
 use stdClass;
 
@@ -85,9 +85,9 @@ class Connection {
             $response->error[0] = new stdClass();
             $response->error[0]->description = 'Tivemos um problema ao processar a requisição.';
         }
-        
+
         return $response;
 
     }
-    
+
 }
